@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'CommunityLinksController@index');
+Route::post('/', 'CommunityLinksController@store');
+Route::get('/{channel}', 'CommunityLinksController@index');
 
-Route::get('community', 'CommunityLinksController@index');
-Route::post('community', 'CommunityLinksController@store');
+Route::post('votes/{link}', 'VotesController@store');
