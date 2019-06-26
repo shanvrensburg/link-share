@@ -16,7 +16,7 @@ class CreateCommunityLinksVotes extends Migration
         Schema::create('community_links_votes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id')->index();
-            $table->integer('community_link_id  ')->index();
+            $table->integer('community_link_id')->index();
             $table->timestamps();
         });
     }
