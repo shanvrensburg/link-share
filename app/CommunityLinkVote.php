@@ -20,6 +20,6 @@ class CommunityLinkVote extends model
             return $this->delete();
         }
 
-        $this->save();
+        return $this->save();
     }
 }
